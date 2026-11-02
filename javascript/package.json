@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "jitter-template",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@12.15.0",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "@types/maxmsp-v8": "file:~/Sites/cyberdelab-apps/maxmsp-v8-types"
+  }
+}

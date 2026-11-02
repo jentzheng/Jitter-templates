@@ -1,0 +1,83 @@
+{
+    "patcher": {
+        "fileversion": 1,
+        "appversion": {
+            "major": 9,
+            "minor": 2,
+            "revision": 0,
+            "architecture": "x64",
+            "modernui": 1
+        },
+        "classnamespace": "jit.gen",
+        "rect": [ 114.0, 115.0, 1000.0, 780.0 ],
+        "boxes": [
+            {
+                "box": {
+                    "code": "Param xfade(0.5, min=0, max=1);\r\nParam mode(11, min=0, max=32);\r\n\r\na = in1;\r\nb = in2;\r\n\r\nopResult = a;\n\r\nif(mode==0) {\r\n    opResult = a;\n} else if (mode == 1) {\r\n    opResult = a * b;\n} else if (mode == 2) {\r\n    opResult = a / b;\r\n} else if (mode == 3) {\r\n    opResult = a + b;\r\n} else if (mode == 4) {\r\n    opResult = a - b;\r\n} else if (mode == 5) {\r\n    opResult = mod(a+b, 1.);\r\n} else if (mode == 6) {\r\n    opResult = mod(a-b, 1.);\r\n} else if (mode == 7) {\r\n    opResult = a % b;\r\n} else if (mode == 8) {\r\n    opResult = min(a, b);\r\n} else if (mode == 9) {\r\n    opResult = max(a, b);\r\n} else if (mode == 10) {\r\n    opResult = abs(a, b);\r\n} else if (mode == 11) {\r\n    opResult = (a + b) * 0.5; //avg\r\n} else if (mode == 12) {\r\n    opResult = abs(a - b); //absdiff\r\n} else if (mode == 13) {\r\n    opResult = b; //!pass\r\n} else if (mode == 14) {\r\n    opResult = b / a; // !/\r\n} else if (mode == 15) {\r\n    opResult = b - a; // !-\r\n} else if (mode == 16) {\r\n    opResult = b % a; // !%\r\n} else if (mode == 17) {\r\n    opResult = (a != 0) * (b != 0); // &\r\n} else if (mode == 18) {\r\n    opResult = (a != 0) + (b != 0); // ｜\r\n} else if (mode == 19) {\r\n    opResult = (a != 0) != (b != 0); // ^\r\n} else if (mode == 20) {\r\n    opResult = a == 0; // ～\r\n} else if (mode == 21) {\r\n    opResult = a > b;\r\n} else if (mode == 22) {\r\n    opResult = a < b;\r\n} else if (mode == 23) {\r\n    opResult = a >= b;\r\n} else if (mode == 24) {\r\n    opResult = a <= b;\r\n} else if (mode == 25) {\r\n    opResult = a == b;\r\n} else if (mode == 26) {\r\n    opResult = a != b;\r\n} else if (mode == 27) {\r\n    opResult = gtp(a, b); // >p\r\n} else if (mode == 28) {\r\n    opResult = ltp(a, b); // <p\r\n} else if (mode == 29) {\r\n    opResult = gtep(a, b); // >=p\r\n} else if (mode == 30) {\r\n    opResult = ltep(a, b); // <=p\r\n} else if (mode == 31) {\r\n    opResult = eqp(a, b);  // ==p\r\n} else if (mode == 32) {\r\n    opResult = neqp(a, b); // !=p\r\n}\r\n\r\n\r\nt = xfade < 0.5\n    ? xfade * 2\n    : (xfade - .5) * 2;\n\ncolor = xfade < 0.5\n    ? mix(a, opResult, t)\n    : mix(opResult, b, t);\n\nout1 = color;",
+                    "fontface": 0,
+                    "fontname": "<Monospaced>",
+                    "fontsize": 12.0,
+                    "id": "obj-1",
+                    "maxclass": "codebox",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 30.0, 100.0, 700.0, 600.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-2",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 30.0, 50.0, 30.0, 22.0 ],
+                    "text": "in 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-3",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 700.0, 50.0, 30.0, 22.0 ],
+                    "text": "in 2"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 30.0, 720.0, 36.0, 22.0 ],
+                    "text": "out 1"
+                }
+            }
+        ],
+        "lines": [
+            {
+                "patchline": {
+                    "destination": [ "obj-4", 0 ],
+                    "source": [ "obj-1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-1", 0 ],
+                    "source": [ "obj-2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-1", 1 ],
+                    "source": [ "obj-3", 0 ]
+                }
+            }
+        ],
+        "autosave": 0
+    }
+}

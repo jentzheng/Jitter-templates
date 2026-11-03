@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 89.0, 96.0, 1243.0, 987.0 ],
+        "rect": [ 926.0, 96.0, 414.0, 987.0 ],
         "openinpresentation": 1,
         "gridonopen": 2,
         "gridsize": [ 8.0, 8.0 ],
@@ -983,7 +983,7 @@
                     "numoutlets": 3,
                     "outlettype": [ "", "", "" ],
                     "patching_rect": [ 184.0, 192.0, 81.0, 22.0 ],
-                    "restore": [ 15.0 ],
+                    "restore": [ 11.0 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0,
                         "parameter_mappable": 0
@@ -1219,7 +1219,7 @@
                     "numoutlets": 3,
                     "outlettype": [ "", "", "" ],
                     "patching_rect": [ 48.0, 124.0, 65.0, 22.0 ],
-                    "restore": [ 0.2992125984251971 ],
+                    "restore": [ 0.3307086614173228 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0,
                         "parameter_mappable": 0
@@ -1442,6 +1442,7 @@
                 "box": {
                     "annotation": "",
                     "appearance": 2,
+                    "hint": "",
                     "id": "obj-6",
                     "maxclass": "live.dial",
                     "numinlets": 1,
@@ -1484,11 +1485,11 @@
                 "box": {
                     "comment": "",
                     "id": "obj-47",
-                    "index": 1,
+                    "index": 0,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "jit_gl_texture" ],
+                    "outlettype": [ "" ],
                     "patching_rect": [ 368.0, -8.0, 30.0, 30.0 ]
                 }
             },
@@ -1496,11 +1497,11 @@
                 "box": {
                     "comment": "",
                     "id": "obj-49",
-                    "index": 2,
+                    "index": 0,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "jit_gl_texture" ],
+                    "outlettype": [ "" ],
                     "patching_rect": [ 816.0, -8.0, 30.0, 30.0 ]
                 }
             },
@@ -1508,7 +1509,7 @@
                 "box": {
                     "comment": "",
                     "id": "obj-50",
-                    "index": 1,
+                    "index": 0,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
@@ -2198,6 +2199,23 @@
                 }
             }
         ],
+        "parameters": {
+            "obj-1": [ "transition-menu", "transition-menu", 0 ],
+            "obj-20": [ "bluramount", "Blur Amt", 0 ],
+            "obj-22": [ "motionblur", "motionblur", 0 ],
+            "obj-37": [ "operator-menu", "OP", 0 ],
+            "obj-6": [ "fade", "XFade", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0,
         "bgcolor": [ 0.115, 0.115, 0.115, 1.0 ],
         "saved_attribute_attributes": {
             "locked_bgcolor": {

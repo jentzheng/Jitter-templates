@@ -90,6 +90,7 @@
                                         "filename": "Matth_ani.mov",
                                         "filekind": "moviefile",
                                         "id": "u171009255",
+                                        "selection": [ 0.7530864197530864, 0.7530864197530864 ],
                                         "loop": 1,
                                         "content_state": {
                                             "loop": 1,
@@ -135,24 +136,25 @@
                     ],
                     "layer-master-pos": [ "position", 0.0, 0.0, 0.0 ],
                     "layer-master-scale": [ "scale", 1.0, 1.0, 1.0 ],
+                    "v8_AA": [],
                     "3mixer-a::gain-1": [ 1.0 ],
-                    "3mixer-a::gain-2": [ 0.0 ],
+                    "3mixer-a::gain-2": [ 0.6141732335090637 ],
                     "3mixer-a::gain-3": [ 0.0 ],
                     "3mixer-b::gain-1": [ 1.0 ],
                     "3mixer-b::gain-2": [ 0.0 ],
                     "3mixer-b::gain-3": [ 0.0 ],
-                    "feedr::fb": [ 0.9 ],
-                    "feedr::bld": [ 0.0 ],
+                    "feedr::fb": [ 0.03839894366698523 ],
+                    "feedr::bld": [ 0.08106443663030216 ],
                     "feedr::gn": [ 1.0 ],
-                    "feedr::ff": [ 0.25 ],
-                    "transition-set::xfade": [ 0.511811023622048 ],
+                    "feedr::ff": [ 1.0 ],
+                    "transition-set::xfade": [ 0.46456692913385805 ],
                     "transition-set::menu": [ 0.0 ],
                     "transition-set::motionBlur": [ 1.0 ],
                     "transition-set::blurAmt": [ 1.0 ],
-                    "transition-set::operator": [ 3.0 ],
-                    "slidr::up": [ 30.0 ],
-                    "slidr::down": [ 30.0 ],
-                    "transformation-set-v1::rota-offset": [ -0.046875, -0.015625 ],
+                    "transition-set::operator": [ 11.0 ],
+                    "slidr::up": [ 0.0 ],
+                    "slidr::down": [ 0.0 ],
+                    "transformation-set-v1::rota-offset": [ 0.578125, 0.46875 ],
                     "transformation-set-v1::rota-zoom": [ 1, 1 ],
                     "transformation-set-v1::rota-theta": [ 0 ],
                     "transformation-set-v1::rota-boundmode": [ 1 ],
@@ -166,7 +168,7 @@
                     "transformation-set-v1::delay-max": [ 30 ],
                     "transformation-set-v1::delay-value": [ 0 ],
                     "transformation-set-v1::delay-enable": [ 0 ],
-                    "transformation-set-v2::rota-offset": [ 0, -0.015625 ],
+                    "transformation-set-v2::rota-offset": [ 0.578125, 0.46875 ],
                     "transformation-set-v2::rota-zoom": [ 1, 1 ],
                     "transformation-set-v2::rota-theta": [ 0 ],
                     "transformation-set-v2::rota-boundmode": [ 1 ],
@@ -177,25 +179,25 @@
                     "transformation-set-v2::brosa-brightness": [ 1.0 ],
                     "transformation-set-v2::brosa-contrast": [ 1.0 ],
                     "transformation-set-v2::brosa-saturation": [ 1.0 ],
-                    "transformation-set-v2::delay-max": [ 30 ],
-                    "transformation-set-v2::delay-value": [ 0 ],
-                    "transformation-set-v2::delay-enable": [ 0 ],
+                    "transformation-set-v2::delay-max": [ 62 ],
+                    "transformation-set-v2::delay-value": [ 67.99999999999996 ],
+                    "transformation-set-v2::delay-enable": [ 1 ],
                     "mapping::attrui": [ "srcdim", 0.0, 0.54, 0.0, 1.0 ],
                     "mapping::attrui[1]": [ "srcdim", 0.46000000000000013, 1.0, 0.0, 1.0 ],
-                    "mapping::attrui[2]": [ "pos", 1754, 59 ],
-                    "mapping::attrui[3]": [ "pos", 2122, 59 ],
-                    "mapping::attrui[4]": [ "size", 362, 185 ],
-                    "mapping::attrui[5]": [ "size", 416, 186 ],
+                    "mapping::attrui[2]": [ "pos", 679, 353 ],
+                    "mapping::attrui[3]": [ "pos", 1029, 353 ],
+                    "mapping::attrui[4]": [ "size", 340, 188 ],
+                    "mapping::attrui[5]": [ "size", 402, 191 ],
                     "mapping::meshwrap-ui::u951006807": [
                         {
                             "meshdim": [ 4, 4 ],
                             "nurbs_order": [ 1, 1 ],
-                            "layer": 2,
+                            "layer": 1,
                             "blend": "alphablend",
                             "lock_to_aspect": 1,
                             "color": [ 1, 1, 1, 1 ],
                             "grid_color": [ 0.3261362160808986, 0.5376475322245443, 0.0291866439859908, 1 ],
-                            "show_ui": 0,
+                            "show_ui": 1,
                             "point_size": 10,
                             "grid_size": 3,
                             "apply_mask": 0,
@@ -206,14 +208,14 @@
                             "checkerboard": 0,
                             "checkerboard_scale": 1,
                             "edgeblendleft": 0,
-                            "edgeblendright": 0,
+                            "edgeblendright": 0.10000000000000002,
                             "edgeblendtop": 0,
                             "edgeblendbottom": 0,
                             "edgeblendcurveleft": 1,
                             "edgeblendcurveright": 1,
                             "edgeblendcurvetop": 1,
                             "edgeblendcurvebottom": 1,
-                            "windowRatio": 1.9567567567567568,
+                            "windowRatio": 1.8085106382978724,
                             "positionMat": {
                                 "scale": [ 1.7777777777777777, 1 ],
                                 "center": [ 0, 0 ],
@@ -229,12 +231,12 @@
                         {
                             "meshdim": [ 4, 4 ],
                             "nurbs_order": [ 1, 1 ],
-                            "layer": 3,
+                            "layer": 1,
                             "blend": "alphablend",
                             "lock_to_aspect": 1,
                             "color": [ 1, 1, 1, 1 ],
                             "grid_color": [ 0.3261362160808986, 0.5376475322245443, 0.0291866439859908, 1 ],
-                            "show_ui": 0,
+                            "show_ui": 1,
                             "point_size": 10,
                             "grid_size": 3,
                             "apply_mask": 0,
@@ -252,7 +254,7 @@
                             "edgeblendcurveright": 1,
                             "edgeblendcurvetop": 1,
                             "edgeblendcurvebottom": 1,
-                            "windowRatio": 2.236559139784946,
+                            "windowRatio": 2.1047120418848166,
                             "positionMat": {
                                 "scale": [ 1.7777777777777777, 1 ],
                                 "center": [ 0, 0 ],
@@ -260,7 +262,7 @@
                                 "planecount": 3,
                                 "type": "float32",
                                 "dimensions": [ 4, 4 ],
-                                "vertices": "[[-1.7777777910232544,-1,0],[-1.7777777910232544,-0.3333333432674408,0],[-1.7777777910232544,0.3333333432674408,0],[-1.7777777910232544,1,0],[-0.5925926566123962,-1,0],[-0.5925926566123962,-0.3333333432674408,0],[-0.5925926566123962,0.3333333432674408,0],[-0.5925926566123962,1,0],[0.5925926566123962,-1,0],[0.5925926566123962,-0.3333333432674408,0],[0.5925926566123962,0.3333333432674408,0],[0.5925926566123962,1,0],[1.7777777910232544,-1,0],[1.7777777910232544,-0.3333333432674408,0],[1.7777777910232544,0.3333333432674408,0],[1.7777777910232544,1,0]]"
+                                "vertices": "[[-1.7777777910232544,-1,0],[-1.7777777910232544,-0.3333333432674408,0],[-1.7777777910232544,0.3333333432674408,0],[-1.7777777910232544,1,0],[-0.5925925970077515,-1,0],[-0.5925925970077515,-0.3333333432674408,0],[-0.5925925970077515,0.3333333432674408,0],[-0.5925925970077515,1,0],[0.5925925970077515,-1,0],[0.5925925970077515,-0.3333333432674408,0],[0.5925925970077515,0.3333333432674408,0],[0.5925925970077515,1,0],[1.7777777910232544,-1,0],[1.7777777910232544,-0.3333333432674408,0],[1.7777777910232544,0.3333333432674408,0],[1.7777777910232544,1,0]]"
                             }
                         }
                     ],
@@ -268,23 +270,95 @@
                         {
                             "nameContains": "proxyable",
                             "activeName": "proxyable-gridshape",
-                            "items": [
-                                [
-                                    "proxyable-master",
-                                    {
-                                        "name": "proxyable-master",
-                                        "posMax": 3,
-                                        "scaleMax": 1
-                                    }
-                                ],
-                                [
-                                    "proxyable-gridshape",
-                                    {
-                                        "name": "proxyable-gridshape",
-                                        "posMax": 1.7086614173228345,
-                                        "scaleMax": 1
-                                    }
-                                ]
+                            "items": []
+                        }
+                    ],
+                    "vsynth::4oscil8r::wave1": [ 0.0 ],
+                    "vsynth::4oscil8r::on1": [ 1.0 ],
+                    "vsynth::4oscil8r::phase1": [ 0.0 ],
+                    "vsynth::4oscil8r::mult1": [ 1.0 ],
+                    "vsynth::4oscil8r::wave2": [ 1.0 ],
+                    "vsynth::4oscil8r::on2": [ 1.0 ],
+                    "vsynth::4oscil8r::phase2": [ 0.0 ],
+                    "vsynth::4oscil8r::mult2": [ 1.0 ],
+                    "vsynth::4oscil8r::wave3": [ 3.0 ],
+                    "vsynth::4oscil8r::on3": [ 1.0 ],
+                    "vsynth::4oscil8r::phase3": [ 0.0 ],
+                    "vsynth::4oscil8r::mult3": [ 1.0 ],
+                    "vsynth::4oscil8r::wave4": [ 5.0 ],
+                    "vsynth::4oscil8r::on4": [ 1.0 ],
+                    "vsynth::4oscil8r::phase4": [ 0.0 ],
+                    "vsynth::4oscil8r::mult4": [ 1.0 ],
+                    "vsynth::4oscil8r::masterosc": [ 1.0 ],
+                    "vsynth::4oscil8r::onstate": [ 1 ],
+                    "vsynth::oper8r::operator": [ 11.0 ],
+                    "vsynth::oper8r::xfade-value": [ 0.33 ],
+                    "vsynth::patternizr::seed": [ 0.3 ],
+                    "vsynth::patternizr::table": [ 0.3 ],
+                    "vsynth::patternizr::xoff": [ 0.20000000000172705 ],
+                    "vsynth::patternizr::xoff[1]": [ 0.7999999999965455 ],
+                    "vsynth::patternizr::xoff[2]": [ 0.047569728123821986 ],
+                    "vsynth::patternizr::xscale": [ 1.0 ],
+                    "vsynth::patternizr::yscale": [ 1.0 ],
+                    "vsynth::patternizr::zscale": [ 1.0 ],
+                    "vsynth::patternizr::bfg_choice": [ 2.0 ],
+                    "vsynth::patternmappr::hzoom-mult": [ 0 ],
+                    "vsynth::patternmappr::Hangle": [ 0.0 ],
+                    "vsynth::patternmappr::operator": [ 12.0 ],
+                    "vsynth::patternmappr::Hfunc": [ 2.0 ],
+                    "vsynth::patternmappr::Hfreq": [ 1.0 ],
+                    "vsynth::patternmappr::Hcmode": [ 2.0 ],
+                    "vsynth::patternmappr::Hoffset_x": [ 0.0 ],
+                    "vsynth::patternmappr::Hoffset_y": [ 0.0 ],
+                    "vsynth::patternmappr::vzoom-mult": [ 0 ],
+                    "vsynth::patternmappr::Vangle": [ 0.0 ],
+                    "vsynth::patternmappr::Vfunc": [ 2.0 ],
+                    "vsynth::patternmappr::Vfreq": [ 1.0 ],
+                    "vsynth::patternmappr::Vcmode": [ 2.0 ],
+                    "vsynth::patternmappr::Hoffset_x[1]": [ 0.0 ],
+                    "vsynth::patternmappr::Hoffset_y[1]": [ 0.9960573427417397 ],
+                    "vsynth::patternmappr::Htilebound": [ 2.0 ],
+                    "vsynth::patternmappr::Htilebound[1]": [ 2.0 ],
+                    "vsynth::patternmappr::lozoom": [ 0.599999999993091 ],
+                    "vsynth::patternmappr::hizoom": [ 1.0 ],
+                    "vsynth::patternmappr::lozoom[1]": [ 1.0 ],
+                    "vsynth::patternmappr::hizoom[1]": [ 1.0 ],
+                    "vsynth::mutil8r::invertR": [ 0.0 ],
+                    "vsynth::mutil8r::rmultiply": [ 1.0 ],
+                    "vsynth::mutil8r::modeR": [ 0.0 ],
+                    "vsynth::mutil8r::invertG": [ 0.0 ],
+                    "vsynth::mutil8r::gmultiply": [ 1.0 ],
+                    "vsynth::mutil8r::modeG": [ 0.0 ],
+                    "vsynth::mutil8r::invertB": [ 0.0 ],
+                    "vsynth::mutil8r::bmultiply": [ 1.0 ],
+                    "vsynth::mutil8r::modeB": [ 0.0 ],
+                    "audio-ctrl-targets": [
+                        {
+                            "rows": [
+                                {
+                                    "label": "feedr:fb",
+                                    "min": 0,
+                                    "max": 1,
+                                    "on": 1,
+                                    "lo": 0,
+                                    "hi": 0.19852941176470584
+                                },
+                                {
+                                    "label": "feedr:gn",
+                                    "min": -1,
+                                    "max": 1,
+                                    "on": 0,
+                                    "lo": 0,
+                                    "hi": 1
+                                },
+                                {
+                                    "label": "feedr:bld",
+                                    "min": 0,
+                                    "max": 1,
+                                    "on": 1,
+                                    "lo": 0,
+                                    "hi": 0.41911764705882354
+                                }
                             ]
                         }
                     ]
@@ -306,7 +380,8 @@
                                         "id": "u079002159",
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     },
                                     {
@@ -316,7 +391,8 @@
                                         "id": "u168011347",
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     },
                                     {
@@ -326,7 +402,8 @@
                                         "id": "u673002177",
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     },
                                     {
@@ -336,7 +413,8 @@
                                         "id": "u510002160",
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     },
                                     {
@@ -346,7 +424,8 @@
                                         "id": "u365002091",
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     }
                                 ]
@@ -364,7 +443,8 @@
                                         "id": "u451002065",
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     },
                                     {
@@ -372,9 +452,11 @@
                                         "filename": "Matth_ani.mov",
                                         "filekind": "moviefile",
                                         "id": "u171009255",
+                                        "selection": [ 0.7530864197530864, 0.7530864197530864 ],
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     },
                                     {
@@ -384,7 +466,8 @@
                                         "id": "u372009257",
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     },
                                     {
@@ -394,69 +477,253 @@
                                         "id": "u967003437",
                                         "loop": 1,
                                         "content_state": {
-                                            "loop": 1
+                                            "loop": 1,
+                                            "unique": 1
+                                        }
+                                    },
+                                    {
+                                        "absolutepath": "taichi-mint.mp4",
+                                        "filename": "taichi-mint.mp4",
+                                        "filekind": "moviefile",
+                                        "id": "u980015448",
+                                        "loop": 1,
+                                        "content_state": {
+                                            "loop": 1,
+                                            "unique": 1
                                         }
                                     }
                                 ]
                             }
                         }
                     ],
-                    "layer-master-pos": [],
-                    "layer-master-scale": [],
-                    "3mixer-a::gain-1": [],
-                    "3mixer-a::gain-2": [],
-                    "3mixer-a::gain-3": [],
-                    "3mixer-b::gain-1": [],
-                    "3mixer-b::gain-2": [],
-                    "3mixer-b::gain-3": [],
-                    "feedr::fb": [ 0.1494336532489753 ],
-                    "feedr::bld": [ 0.3779527559055118 ],
-                    "feedr::gn": [ 1.0 ],
-                    "feedr::ff": [ 1.0 ],
-                    "transition-set::xfade": [ 0.0 ],
-                    "transition-set::menu": [ 7.0 ],
+                    "layer-master-pos": [ "position", 0.0, 0.0, 0.0 ],
+                    "layer-master-scale": [ "scale", 1.0, 1.0, 1.0 ],
+                    "v8_AA": [],
+                    "3mixer-a::gain-1": [ 1.0 ],
+                    "3mixer-a::gain-2": [ 0.0 ],
+                    "3mixer-a::gain-3": [ 0.0 ],
+                    "3mixer-b::gain-1": [ 1.0 ],
+                    "3mixer-b::gain-2": [ 0.0 ],
+                    "3mixer-b::gain-3": [ 0.0 ],
+                    "feedr::fb": [ 0.5986087481290681 ],
+                    "feedr::bld": [ 0.011438724472035944 ],
+                    "feedr::gn": [ -0.9771225510559282 ],
+                    "feedr::ff": [ 0.25 ],
+                    "transition-set::xfade": [ 0.5 ],
+                    "transition-set::menu": [ 1.0 ],
                     "transition-set::motionBlur": [ 1.0 ],
                     "transition-set::blurAmt": [ 1.0 ],
-                    "transition-set::operator": [ 28.0 ],
-                    "slidr::up": [ 5.0 ],
-                    "slidr::down": [ 10.0 ],
-                    "transformation-set-v1::rota-offset": [ 0, 0 ],
+                    "transition-set::operator": [ 12.0 ],
+                    "slidr::up": [ 30.0 ],
+                    "slidr::down": [ 30.0 ],
+                    "transformation-set-v1::rota-offset": [ 0.578125, 0.46875 ],
                     "transformation-set-v1::rota-zoom": [ 1, 1 ],
                     "transformation-set-v1::rota-theta": [ 0 ],
-                    "transformation-set-v1::rota-boundmode": [ 3 ],
-                    "transformation-set-v1::rota-enable": [],
-                    "transformation-set-v1::kaleido-enable": [],
-                    "transformation-set-v1::brosa-enable": [],
-                    "transformation-set-v1::kaleido-origin": [],
-                    "transformation-set-v1::brosa-brightness": [],
-                    "transformation-set-v1::brosa-contrast": [],
-                    "transformation-set-v1::brosa-saturation": [],
-                    "transformation-set-v1::delay-max": [],
-                    "transformation-set-v1::delay-value": [],
-                    "transformation-set-v1::delay-enable": [],
-                    "transformation-set-v2::rota-offset": [ 0, 0 ],
+                    "transformation-set-v1::rota-boundmode": [ 1 ],
+                    "transformation-set-v1::rota-enable": [ 0 ],
+                    "transformation-set-v1::kaleido-enable": [ 0 ],
+                    "transformation-set-v1::brosa-enable": [ 0 ],
+                    "transformation-set-v1::kaleido-origin": [ 0.23800000000000004, 1.2100000000000002 ],
+                    "transformation-set-v1::brosa-brightness": [ 1.0 ],
+                    "transformation-set-v1::brosa-contrast": [ 1.0 ],
+                    "transformation-set-v1::brosa-saturation": [ 1.0 ],
+                    "transformation-set-v1::delay-max": [ 30 ],
+                    "transformation-set-v1::delay-value": [ 0 ],
+                    "transformation-set-v1::delay-enable": [ 0 ],
+                    "transformation-set-v2::rota-offset": [ 0.578125, 0.46875 ],
                     "transformation-set-v2::rota-zoom": [ 1, 1 ],
                     "transformation-set-v2::rota-theta": [ 0 ],
                     "transformation-set-v2::rota-boundmode": [ 1 ],
-                    "transformation-set-v2::rota-enable": [],
-                    "transformation-set-v2::kaleido-enable": [],
-                    "transformation-set-v2::brosa-enable": [],
-                    "transformation-set-v2::kaleido-origin": [],
-                    "transformation-set-v2::brosa-brightness": [],
-                    "transformation-set-v2::brosa-contrast": [],
-                    "transformation-set-v2::brosa-saturation": [],
-                    "transformation-set-v2::delay-max": [],
-                    "transformation-set-v2::delay-value": [],
-                    "transformation-set-v2::delay-enable": [],
-                    "mapping::attrui": [],
-                    "mapping::attrui[1]": [],
-                    "mapping::attrui[2]": [],
-                    "mapping::attrui[3]": [],
-                    "mapping::attrui[4]": [],
-                    "mapping::attrui[5]": [],
-                    "mapping::meshwrap-ui::u951006807": [],
-                    "mapping::meshwrap-ui[1]::u951006807": [],
-                    "jit-proxy-controller::data": []
+                    "transformation-set-v2::rota-enable": [ 0 ],
+                    "transformation-set-v2::kaleido-enable": [ 0 ],
+                    "transformation-set-v2::brosa-enable": [ 0 ],
+                    "transformation-set-v2::kaleido-origin": [ 0.23800000000000004, 1.2100000000000002 ],
+                    "transformation-set-v2::brosa-brightness": [ 1.0 ],
+                    "transformation-set-v2::brosa-contrast": [ 1.0 ],
+                    "transformation-set-v2::brosa-saturation": [ 1.0 ],
+                    "transformation-set-v2::delay-max": [ 30 ],
+                    "transformation-set-v2::delay-value": [ 0 ],
+                    "transformation-set-v2::delay-enable": [ 0 ],
+                    "mapping::attrui": [ "srcdim", 0.0, 0.54, 0.0, 1.0 ],
+                    "mapping::attrui[1]": [ "srcdim", 0.46000000000000013, 1.0, 0.0, 1.0 ],
+                    "mapping::attrui[2]": [ "pos", 679, 353 ],
+                    "mapping::attrui[3]": [ "pos", 1029, 353 ],
+                    "mapping::attrui[4]": [ "size", 340, 188 ],
+                    "mapping::attrui[5]": [ "size", 402, 191 ],
+                    "mapping::meshwrap-ui::u951006807": [
+                        {
+                            "meshdim": [ 4, 4 ],
+                            "nurbs_order": [ 1, 1 ],
+                            "layer": 1,
+                            "blend": "alphablend",
+                            "lock_to_aspect": 1,
+                            "color": [ 1, 1, 1, 1 ],
+                            "grid_color": [ 0.3261362160808986, 0.5376475322245443, 0.0291866439859908, 1 ],
+                            "show_ui": 1,
+                            "point_size": 10,
+                            "grid_size": 3,
+                            "apply_mask": 0,
+                            "invert_mask": 0,
+                            "mask_feather": 0,
+                            "mask_feather_curve": 2,
+                            "scale_mask": 1,
+                            "checkerboard": 0,
+                            "checkerboard_scale": 1,
+                            "edgeblendleft": 0,
+                            "edgeblendright": 0.10000000000000002,
+                            "edgeblendtop": 0,
+                            "edgeblendbottom": 0,
+                            "edgeblendcurveleft": 1,
+                            "edgeblendcurveright": 1,
+                            "edgeblendcurvetop": 1,
+                            "edgeblendcurvebottom": 1,
+                            "windowRatio": 1.8085106382978724,
+                            "positionMat": {
+                                "scale": [ 1, 1 ],
+                                "center": [ 0, 0 ],
+                                "rotatez": 0,
+                                "planecount": 3,
+                                "type": "float32",
+                                "dimensions": [ 4, 4 ],
+                                "vertices": "[[-1,-1,0],[-1,-0.3333333432674408,0],[-1,0.3333333432674408,0],[-1,1,0],[-0.3333333432674408,-1,0],[-0.3333333432674408,-0.3333333432674408,0],[-0.3333333432674408,0.3333333432674408,0],[-0.3333333432674408,1,0],[0.3333333432674408,-1,0],[0.3333333432674408,-0.3333333432674408,0],[0.3333333432674408,0.3333333432674408,0],[0.3333333432674408,1,0],[1,-1,0],[1,-0.3333333432674408,0],[1,0.3333333432674408,0],[1,1,0]]"
+                            }
+                        }
+                    ],
+                    "mapping::meshwrap-ui[1]::u951006807": [
+                        {
+                            "meshdim": [ 4, 4 ],
+                            "nurbs_order": [ 1, 1 ],
+                            "layer": 1,
+                            "blend": "alphablend",
+                            "lock_to_aspect": 1,
+                            "color": [ 1, 1, 1, 1 ],
+                            "grid_color": [ 0.3261362160808986, 0.5376475322245443, 0.0291866439859908, 1 ],
+                            "show_ui": 1,
+                            "point_size": 10,
+                            "grid_size": 3,
+                            "apply_mask": 0,
+                            "invert_mask": 0,
+                            "mask_feather": 0,
+                            "mask_feather_curve": 2,
+                            "scale_mask": 1,
+                            "checkerboard": 0,
+                            "checkerboard_scale": 1,
+                            "edgeblendleft": 0,
+                            "edgeblendright": 0,
+                            "edgeblendtop": 0,
+                            "edgeblendbottom": 0,
+                            "edgeblendcurveleft": 1,
+                            "edgeblendcurveright": 1,
+                            "edgeblendcurvetop": 1,
+                            "edgeblendcurvebottom": 1,
+                            "windowRatio": 2.1047120418848166,
+                            "positionMat": {
+                                "scale": [ 1, 1 ],
+                                "center": [ 0, 0 ],
+                                "rotatez": 0,
+                                "planecount": 3,
+                                "type": "float32",
+                                "dimensions": [ 4, 4 ],
+                                "vertices": "[[-1,-1,0],[-1,-0.3333333432674408,0],[-1,0.3333333432674408,0],[-1,1,0],[-0.3333333432674408,-1,0],[-0.3333333432674408,-0.3333333432674408,0],[-0.3333333432674408,0.3333333432674408,0],[-0.3333333432674408,1,0],[0.3333333432674408,-1,0],[0.3333333432674408,-0.3333333432674408,0],[0.3333333432674408,0.3333333432674408,0],[0.3333333432674408,1,0],[1,-1,0],[1,-0.3333333432674408,0],[1,0.3333333432674408,0],[1,1,0]]"
+                            }
+                        }
+                    ],
+                    "jit-proxy-controller::data": [
+                        {
+                            "nameContains": "proxyable",
+                            "activeName": null,
+                            "items": []
+                        }
+                    ],
+                    "vsynth::4oscil8r::wave1": [ 0.0 ],
+                    "vsynth::4oscil8r::on1": [ 1.0 ],
+                    "vsynth::4oscil8r::phase1": [ 0.0 ],
+                    "vsynth::4oscil8r::mult1": [ 1.0 ],
+                    "vsynth::4oscil8r::wave2": [ 1.0 ],
+                    "vsynth::4oscil8r::on2": [ 1.0 ],
+                    "vsynth::4oscil8r::phase2": [ 0.0 ],
+                    "vsynth::4oscil8r::mult2": [ 1.0 ],
+                    "vsynth::4oscil8r::wave3": [ 3.0 ],
+                    "vsynth::4oscil8r::on3": [ 1.0 ],
+                    "vsynth::4oscil8r::phase3": [ 0.0 ],
+                    "vsynth::4oscil8r::mult3": [ 1.0 ],
+                    "vsynth::4oscil8r::wave4": [ 5.0 ],
+                    "vsynth::4oscil8r::on4": [ 1.0 ],
+                    "vsynth::4oscil8r::phase4": [ 0.0 ],
+                    "vsynth::4oscil8r::mult4": [ 1.0 ],
+                    "vsynth::4oscil8r::masterosc": [ 1.0 ],
+                    "vsynth::4oscil8r::onstate": [ 1 ],
+                    "vsynth::oper8r::operator": [ 11.0 ],
+                    "vsynth::oper8r::xfade-value": [ 0.33 ],
+                    "vsynth::patternizr::seed": [ 0.3 ],
+                    "vsynth::patternizr::table": [ 0.3 ],
+                    "vsynth::patternizr::xoff": [ 0.7400000000007726 ],
+                    "vsynth::patternizr::xoff[1]": [ 0.679999999998455 ],
+                    "vsynth::patternizr::xoff[2]": [ 0.9433974455422851 ],
+                    "vsynth::patternizr::xscale": [ 1.0 ],
+                    "vsynth::patternizr::yscale": [ 1.0 ],
+                    "vsynth::patternizr::zscale": [ 1.0 ],
+                    "vsynth::patternizr::bfg_choice": [ 2.0 ],
+                    "vsynth::patternmappr::hzoom-mult": [ 0 ],
+                    "vsynth::patternmappr::Hangle": [ 0.0 ],
+                    "vsynth::patternmappr::operator": [ 12.0 ],
+                    "vsynth::patternmappr::Hfunc": [ 2.0 ],
+                    "vsynth::patternmappr::Hfreq": [ 1.0 ],
+                    "vsynth::patternmappr::Hcmode": [ 2.0 ],
+                    "vsynth::patternmappr::Hoffset_x": [ 0.0 ],
+                    "vsynth::patternmappr::Hoffset_y": [ 0.0 ],
+                    "vsynth::patternmappr::vzoom-mult": [ 0 ],
+                    "vsynth::patternmappr::Vangle": [ 0.0 ],
+                    "vsynth::patternmappr::Vfunc": [ 2.0 ],
+                    "vsynth::patternmappr::Vfreq": [ 1.0 ],
+                    "vsynth::patternmappr::Vcmode": [ 2.0 ],
+                    "vsynth::patternmappr::Hoffset_x[1]": [ 0.0 ],
+                    "vsynth::patternmappr::Hoffset_y[1]": [ 0.2871103557643547 ],
+                    "vsynth::patternmappr::Htilebound": [ 2.0 ],
+                    "vsynth::patternmappr::Htilebound[1]": [ 2.0 ],
+                    "vsynth::patternmappr::lozoom": [ 0.3599999999969099 ],
+                    "vsynth::patternmappr::hizoom": [ 1.0 ],
+                    "vsynth::patternmappr::lozoom[1]": [ 1.0 ],
+                    "vsynth::patternmappr::hizoom[1]": [ 1.0 ],
+                    "vsynth::mutil8r::invertR": [ 0.0 ],
+                    "vsynth::mutil8r::rmultiply": [ 1.0 ],
+                    "vsynth::mutil8r::modeR": [ 0.0 ],
+                    "vsynth::mutil8r::invertG": [ 0.0 ],
+                    "vsynth::mutil8r::gmultiply": [ 1.0 ],
+                    "vsynth::mutil8r::modeG": [ 0.0 ],
+                    "vsynth::mutil8r::invertB": [ 0.0 ],
+                    "vsynth::mutil8r::bmultiply": [ 1.0 ],
+                    "vsynth::mutil8r::modeB": [ 0.0 ],
+                    "audio-ctrl-targets": [
+                        {
+                            "rows": [
+                                {
+                                    "label": "feedr:fb",
+                                    "min": 0,
+                                    "max": 1,
+                                    "on": 1,
+                                    "lo": 0.5958188153310106,
+                                    "hi": 0.8397212543554006
+                                },
+                                {
+                                    "label": "feedr:gn",
+                                    "min": -1,
+                                    "max": 1,
+                                    "on": 1,
+                                    "lo": 0,
+                                    "hi": 1
+                                },
+                                {
+                                    "label": "feedr:bld",
+                                    "min": 0,
+                                    "max": 1,
+                                    "on": 1,
+                                    "lo": 0,
+                                    "hi": 1
+                                }
+                            ]
+                        }
+                    ]
                 }
             }
         }

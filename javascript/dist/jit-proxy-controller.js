@@ -12,16 +12,20 @@ declareattribute("name_contains", {
     getter: "getNameContains",
     setter: "setNameContains",
 });
+getNameContains.local = 1;
 function getNameContains() {
+    console.log("getNameContains called");
     return data.nameContains;
 }
+setNameContains.local = 1;
 function setNameContains(val) {
+    console.log("setNameContains called with", val);
     data.nameContains = val;
 }
 // trigger when patch opened or pattrstorage slot called
+setvalueof.local = 1;
 function setvalueof(dict) {
     // restore pattr data from patch
-    console.log("setvalueof called");
     const newData = JSON.parse(dict.stringify());
     Object.assign(data, {
         activeName: newData.activeName,
@@ -29,8 +33,8 @@ function setvalueof(dict) {
     });
 }
 // trigger when patch saved or notifyclients() called
+getvalueof.local = 1;
 function getvalueof() {
-    console.log("getvalueof called");
     const dict = new Dict();
     dict.parse(JSON.stringify({
         nameContains: data.nameContains,
@@ -41,10 +45,7 @@ function getvalueof() {
 }
 loadbang.local = 0;
 function loadbang() {
-    patcher.message("script", "send", "chooser", "clear");
-    patcher.message("script", "send", "posMax", "bang");
-    patcher.message("script", "send", "scaleMax", "bang");
-    patcher.parentpatcher.applyif((obj) => {
+    patcher.parentpatcher.applydeepif((obj) => {
         const name = obj.getattr("name");
         if (data.items.has(name)) {
             return;
@@ -54,20 +55,14 @@ function loadbang() {
             posMax: 1,
             scaleMax: 1,
         });
-        // if (!data.items.find((e) => e.name === name)) {
-        //   data.items.push({
-        //     name,
-        //     posMultiplier: 1,
-        //     pictslider: [64, 64],
-        //     scaleAll: 1,
-        //     scaleMax: 1,
-        //   });
-        // }
     }, (obj) => {
         const name = obj.getattr("name");
         return obj.maxclass.startsWith("jit.gl") && name.includes(data.nameContains);
     });
     patcher.message("script", "send", "chooser", "clear");
+    if (data.items.size === 0) {
+        return;
+    }
     data.items.forEach((item) => {
         patcher.message("script", "send", "chooser", "append", item.name);
     });
@@ -75,10 +70,12 @@ function loadbang() {
         data.activeName = Array.from(data.items.keys())[0] || "";
         patcher.message("script", "send", "chooser", "set", 0);
     }
-    patcher.message("script", "send", "jitproxy", "name", data.activeName);
-    patcher.message("script", "send", "chooser", "bang");
     const idx = Array.from(data.items.keys()).indexOf(data.activeName);
+    patcher.message("script", "send", "jitproxy", "name", data.activeName);
     patcher.message("script", "send", "chooser", "set", idx);
+    patcher.message("script", "send", "posMax", "bang");
+    patcher.message("script", "send", "scaleMax", "bang");
+    outlet(0, 1);
 }
 // scan
 bang.local = 0;
@@ -88,6 +85,8 @@ function bang() {
 getAttrs.local = 0;
 function getAttrs(name) {
     data.activeName = name;
+    notifyclients();
+    outlet(0, 1);
     patcher.message("script", "send", "jitproxy", "name", name);
     patcher.message("script", "send", "jitproxy", "getposition");
     patcher.message("script", "send", "jitproxy", "getscale");
@@ -101,7 +100,6 @@ function getAttrs(name) {
         patcher.message("script", "send", "posMax", "set", item.posMax);
         patcher.message("script", "send", "scaleMax", "set", item.scaleMax);
     }
-    notifyclients();
 }
 setAttrs.local = 0;
 function setAttrs(name, ...value) {

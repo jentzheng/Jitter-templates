@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 1728.0, 59.0, 1213.0, 1017.0 ],
+        "rect": [ 155.0, 134.0, 1067.0, 983.0 ],
         "openrect": [ 0.0, 0.0, 640.0, 168.0 ],
         "openrectmode": 0,
         "openinpresentation": 1,
@@ -239,7 +239,7 @@
                         "valueof": {
                             "parameter_initial": [ 30 ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "max_delay",
+                            "parameter_longname": "max_delay[1]",
                             "parameter_modmode": 4,
                             "parameter_shortname": "max_delay",
                             "parameter_type": 1,
@@ -266,7 +266,7 @@
                         "valueof": {
                             "parameter_initial": [ 0 ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "delay",
+                            "parameter_longname": "delay[1]",
                             "parameter_modmode": 3,
                             "parameter_shortname": "delay",
                             "parameter_type": 0,
@@ -383,7 +383,7 @@
                     "numoutlets": 3,
                     "outlettype": [ "", "", "" ],
                     "patching_rect": [ -200.0, 519.0, 246.0, 22.0 ],
-                    "restore": [ 0.23800000000000004, 1.2100000000000002 ],
+                    "restore": [ 0.0, 0.0 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0,
                         "parameter_mappable": 0
@@ -488,7 +488,7 @@
                         "valueof": {
                             "parameter_initial": [ 1 ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "saturation[1]",
+                            "parameter_longname": "saturation",
                             "parameter_mmax": 1.0,
                             "parameter_mmin": -1.0,
                             "parameter_modmode": 3,
@@ -517,7 +517,7 @@
                         "valueof": {
                             "parameter_initial": [ 1 ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "contrast[1]",
+                            "parameter_longname": "contrast",
                             "parameter_mmax": 1.0,
                             "parameter_mmin": -1.0,
                             "parameter_modmode": 3,
@@ -546,7 +546,7 @@
                         "valueof": {
                             "parameter_initial": [ 1 ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "brightness[1]",
+                            "parameter_longname": "brightness",
                             "parameter_mmax": 1.0,
                             "parameter_modmode": 3,
                             "parameter_shortname": "brightness",
@@ -678,7 +678,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 208.0, 104.0, 40.0, 16.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 128.0, 144.0, 16.0, 16.0 ],
+                    "presentation_rect": [ 128.0, 136.0, 16.0, 16.0 ],
                     "prototypename": "M4L.toggle",
                     "text": "C",
                     "textcolor": [ 0.101961, 0.121569, 0.172549, 1.0 ],
@@ -762,7 +762,7 @@
                     "numoutlets": 3,
                     "outlettype": [ "", "", "" ],
                     "patching_rect": [ 408.0, 320.0, 211.0, 22.0 ],
-                    "restore": [ -0.2700000000000001, -0.30000000000000004 ],
+                    "restore": [ 1, 1 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0,
                         "parameter_mappable": 0
@@ -834,7 +834,7 @@
                     "numoutlets": 3,
                     "outlettype": [ "", "", "" ],
                     "patching_rect": [ 272.0, -24.0, 211.0, 22.0 ],
-                    "restore": [ 0, 0 ],
+                    "restore": [ 0.578125, 0.46875 ],
                     "saved_object_attributes": {
                         "parameter_enable": 0,
                         "parameter_mappable": 0
@@ -977,7 +977,7 @@
                     "parameter_enable": 1,
                     "patching_rect": [ -64.0, 328.0, 88.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 152.0, 144.0, 56.0, 18.0 ],
+                    "presentation_rect": [ 152.0, 136.0, 56.0, 18.0 ],
                     "saved_attribute_attributes": {
                         "activebgcolor": {
                             "expression": ""
@@ -1002,7 +1002,7 @@
                             "parameter_initial": [ 1 ],
                             "parameter_initial_enable": 1,
                             "parameter_linknames": 1,
-                            "parameter_longname": "rota-boundmode-menu[1]",
+                            "parameter_longname": "rota-boundmode-menu",
                             "parameter_mmax": 3,
                             "parameter_modmode": 0,
                             "parameter_shortname": "rota-boundmode",
@@ -1051,7 +1051,7 @@
                         "valueof": {
                             "parameter_initial": [ 1 ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "zoomX",
+                            "parameter_longname": "zoom",
                             "parameter_mmax": 1.0,
                             "parameter_mmin": -1.0,
                             "parameter_modmode": 3,
@@ -1096,7 +1096,7 @@
                         "valueof": {
                             "parameter_initial": [ 0 ],
                             "parameter_initial_enable": 1,
-                            "parameter_longname": "theta[1]",
+                            "parameter_longname": "theta",
                             "parameter_mmax": 3.14,
                             "parameter_mmin": -3.14,
                             "parameter_modmode": 3,
@@ -1140,11 +1140,11 @@
                 "box": {
                     "comment": "",
                     "id": "obj-70",
-                    "index": 1,
+                    "index": 0,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
-                    "outlettype": [ "jit_gl_texture" ],
+                    "outlettype": [ "" ],
                     "patching_rect": [ 145.0, 24.0, 30.0, 30.0 ]
                 }
             },
@@ -1152,7 +1152,7 @@
                 "box": {
                     "comment": "",
                     "id": "obj-71",
-                    "index": 1,
+                    "index": 0,
                     "maxclass": "outlet",
                     "numinlets": 1,
                     "numoutlets": 0,
@@ -1504,6 +1504,27 @@
                 }
             }
         ],
+        "parameters": {
+            "obj-22": [ "brightness", "brightness", 0 ],
+            "obj-23": [ "contrast", "contrast", 0 ],
+            "obj-24": [ "saturation", "saturation", 0 ],
+            "obj-37": [ "theta", "theta", 0 ],
+            "obj-40": [ "zoomY", "zoomY", 0 ],
+            "obj-59": [ "zoom", "zoomX", 0 ],
+            "obj-65": [ "rota-boundmode-menu", "rota-boundmode", 0 ],
+            "obj-67": [ "delay[1]", "delay", 0 ],
+            "obj-69": [ "max_delay[1]", "max_delay", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0,
         "styles": [
             {
                 "name": "Audiomix",

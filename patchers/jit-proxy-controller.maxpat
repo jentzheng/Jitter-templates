@@ -9,7 +9,9 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 89.0, 96.0, 778.0, 987.0 ],
+        "rect": [ 704.0, 96.0, 616.0, 987.0 ],
+        "openrect": [ 0.0, 0.0, 608.0, 168.0 ],
+        "openrectmode": 0,
         "openinpresentation": 1,
         "gridonopen": 2,
         "gridsize": [ 8.0, 8.0 ],
@@ -19,6 +21,38 @@
         "subpatcher_template": "show_and_snap_to_grid",
         "integercoordinates": 1,
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-42",
+                    "maxclass": "gswitch2",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 56.0, 480.0, 39.0, 32.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-34",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ -64.0, 400.0, 100.0, 22.0 ],
+                    "text": "r #0-targetName"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-33",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ -64.0, -136.0, 100.0, 22.0 ],
+                    "text": "s #0-targetName"
+                }
+            },
             {
                 "box": {
                     "id": "obj-6",
@@ -98,21 +132,22 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 423.0, 263.0, 121.0, 23.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 520.0, 64.0, 104.0, 23.0 ],
+                    "presentation_rect": [ 480.0, 56.0, 104.0, 23.0 ],
                     "text_width": 72.0
                 }
             },
             {
                 "box": {
+                    "appearance": 1,
                     "id": "obj-99",
                     "maxclass": "live.dial",
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 264.0, -56.0, 40.0, 48.0 ],
+                    "patching_rect": [ 264.0, -56.0, 25.0, 36.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 328.0, 56.0, 48.0, 48.0 ],
+                    "presentation_rect": [ 304.0, 48.0, 48.0, 36.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_linknames": 1,
@@ -150,7 +185,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 214.0, -54.0, 32.0, 100.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 296.0, 24.0, 24.0, 152.0 ],
+                    "presentation_rect": [ 272.0, 24.0, 24.0, 128.0 ],
                     "varname": "posZSlider"
                 }
             },
@@ -254,15 +289,16 @@
             },
             {
                 "box": {
+                    "appearance": 1,
                     "id": "obj-17",
                     "maxclass": "live.dial",
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 416.0, -176.0, 56.0, 48.0 ],
+                    "patching_rect": [ 416.0, -176.0, 25.0, 36.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 328.0, 120.0, 48.0, 48.0 ],
+                    "presentation_rect": [ 304.0, 96.0, 48.0, 36.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_linknames": 1,
@@ -271,7 +307,8 @@
                             "parameter_mmin": 1.0,
                             "parameter_modmode": 4,
                             "parameter_shortname": "Scale Max",
-                            "parameter_type": 0
+                            "parameter_type": 0,
+                            "parameter_unitstyle": 0
                         }
                     },
                     "varname": "scaleMax"
@@ -332,15 +369,16 @@
             },
             {
                 "box": {
+                    "appearance": 1,
                     "id": "obj-4",
                     "maxclass": "live.dial",
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 416.0, -32.0, 40.0, 48.0 ],
+                    "patching_rect": [ 416.0, -32.0, 25.0, 36.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 400.0, 32.0, 56.0, 48.0 ],
+                    "presentation_rect": [ 360.0, 24.0, 48.0, 36.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ 1 ],
@@ -367,33 +405,8 @@
                     "restore": [
                         {
                             "nameContains": "proxyable",
-                            "activeName": "proxyable-layer1",
-                            "items": [
-                                [
-                                    "proxyable-layer1",
-                                    {
-                                        "name": "proxyable-layer1",
-                                        "posMax": 1,
-                                        "scaleMax": 1
-                                    }
-                                ],
-                                [
-                                    "proxyable-layer2",
-                                    {
-                                        "name": "proxyable-layer2",
-                                        "posMax": 1,
-                                        "scaleMax": 1
-                                    }
-                                ],
-                                [
-                                    "proxyable-gridshape",
-                                    {
-                                        "name": "proxyable-gridshape",
-                                        "posMax": 1,
-                                        "scaleMax": 1
-                                    }
-                                ]
-                            ]
+                            "activeName": null,
+                            "items": []
                         }
                     ],
                     "saved_object_attributes": {
@@ -414,7 +427,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 662.0, 471.0, 24.0, 24.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 520.0, 32.0, 24.0, 24.0 ],
+                    "presentation_rect": [ 480.0, 24.0, 24.0, 24.0 ],
                     "varname": "isBlendEnable"
                 }
             },
@@ -464,7 +477,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 802.0, 479.0, 100.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 544.0, 32.0, 104.0, 22.0 ],
+                    "presentation_rect": [ 504.0, 24.0, 96.0, 22.0 ],
                     "varname": "blendMenu"
                 }
             },
@@ -478,14 +491,15 @@
                     "outlettype": [ "" ],
                     "patching_rect": [ 48.0, -184.0, 131.0, 22.0 ],
                     "saved_object_attributes": {
-                        "embed": 0,
+                        "embed": 1,
                         "parameter_enable": 0
                     },
                     "text": "v8 jit-proxy-controller.js",
                     "textfile": {
+                        "text": "\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\ninlets = 1;\noutlets = 1;\nconst data = {\n    nameContains: \"proxyable\",\n    activeName: null,\n    items: new Map(),\n};\ndeclareattribute(\"name_contains\", {\n    type: \"symbol\",\n    getter: \"getNameContains\",\n    setter: \"setNameContains\",\n});\ngetNameContains.local = 1;\nfunction getNameContains() {\n    console.log(\"getNameContains called\");\n    return data.nameContains;\n}\nsetNameContains.local = 1;\nfunction setNameContains(val) {\n    console.log(\"setNameContains called with\", val);\n    data.nameContains = val;\n}\n// trigger when patch opened or pattrstorage slot called\nsetvalueof.local = 1;\nfunction setvalueof(dict) {\n    // restore pattr data from patch\n    const newData = JSON.parse(dict.stringify());\n    Object.assign(data, {\n        activeName: newData.activeName,\n        items: new Map(newData.items),\n    });\n}\n// trigger when patch saved or notifyclients() called\ngetvalueof.local = 1;\nfunction getvalueof() {\n    const dict = new Dict();\n    dict.parse(JSON.stringify({\n        nameContains: data.nameContains,\n        activeName: data.activeName,\n        items: Array.from(data.items.entries()),\n    }));\n    return dict;\n}\nloadbang.local = 0;\nfunction loadbang() {\n    patcher.parentpatcher.applydeepif((obj) => {\n        const name = obj.getattr(\"name\");\n        if (data.items.has(name)) {\n            return;\n        }\n        data.items.set(name, {\n            name,\n            posMax: 1,\n            scaleMax: 1,\n        });\n    }, (obj) => {\n        const name = obj.getattr(\"name\");\n        return obj.maxclass.startsWith(\"jit.gl\") && name.includes(data.nameContains);\n    });\n    patcher.message(\"script\", \"send\", \"chooser\", \"clear\");\n    if (data.items.size === 0) {\n        return;\n    }\n    data.items.forEach((item) => {\n        patcher.message(\"script\", \"send\", \"chooser\", \"append\", item.name);\n    });\n    if (!data.activeName) {\n        data.activeName = Array.from(data.items.keys())[0] || \"\";\n        patcher.message(\"script\", \"send\", \"chooser\", \"set\", 0);\n    }\n    const idx = Array.from(data.items.keys()).indexOf(data.activeName);\n    patcher.message(\"script\", \"send\", \"jitproxy\", \"name\", data.activeName);\n    patcher.message(\"script\", \"send\", \"chooser\", \"set\", idx);\n    patcher.message(\"script\", \"send\", \"posMax\", \"bang\");\n    patcher.message(\"script\", \"send\", \"scaleMax\", \"bang\");\n    outlet(0, 1);\n}\n// scan\nbang.local = 0;\nfunction bang() {\n    loadbang();\n}\ngetAttrs.local = 0;\nfunction getAttrs(name) {\n    data.activeName = name;\n    notifyclients();\n    outlet(0, 1);\n    patcher.message(\"script\", \"send\", \"jitproxy\", \"name\", name);\n    patcher.message(\"script\", \"send\", \"jitproxy\", \"getposition\");\n    patcher.message(\"script\", \"send\", \"jitproxy\", \"getscale\");\n    patcher.message(\"script\", \"send\", \"jitproxy\", \"getrotatexyz\");\n    patcher.message(\"script\", \"send\", \"jitproxy\", \"getgl_color\");\n    patcher.message(\"script\", \"send\", \"jitproxy\", \"getblend_enable\");\n    patcher.message(\"script\", \"send\", \"jitproxy\", \"getblend\");\n    // sync local UI\n    const item = data.items.get(data.activeName);\n    if (item) {\n        patcher.message(\"script\", \"send\", \"posMax\", \"set\", item.posMax);\n        patcher.message(\"script\", \"send\", \"scaleMax\", \"set\", item.scaleMax);\n    }\n}\nsetAttrs.local = 0;\nfunction setAttrs(name, ...value) {\n    if (name === \"position\") {\n        const [x, y, z] = value;\n        patcher.message(\"script\", \"send\", \"posXYSlider\", \"set\", [\n            Math.round((x + 1) * 63.5),\n            Math.round((y + 1) * 63.5),\n        ]);\n        patcher.message(\"script\", \"send\", \"posZSlider\", \"set\", Math.round((z + 1) * 63.5));\n    }\n    else if (name === \"scale\") {\n        const [x, y, z] = value;\n        patcher.message(\"script\", \"send\", \"scaleX\", \"set\", x);\n        patcher.message(\"script\", \"send\", \"scaleY\", \"set\", y);\n        patcher.message(\"script\", \"send\", \"scaleZ\", \"set\", z);\n    }\n    else if (name === \"rotatexyz\") {\n        const [x, y, z] = value;\n        patcher.message(\"script\", \"send\", \"rotaX\", \"set\", x);\n        patcher.message(\"script\", \"send\", \"rotaY\", \"set\", y);\n        patcher.message(\"script\", \"send\", \"rotaZ\", \"set\", z);\n    }\n    else if (name === \"gl_color\") {\n        const [r, g, b, a] = value;\n        patcher.message(\"script\", \"send\", \"sliderAlpha\", \"set\", a);\n        patcher.message(\"script\", \"send\", \"swatch\", \"set\", [r, g, b, a]);\n    }\n    else if (name === \"blend_enable\") {\n        patcher.message(\"script\", \"send\", \"isBlendEnable\", \"set\", value);\n    }\n    else if (name === \"blend\") {\n        const [blendSym] = value;\n        patcher.message(\"script\", \"send\", \"blendMenu\", \"symbol\", blendSym);\n    }\n}\nsetLocalData.local = 0;\nfunction setLocalData(name, ...value) {\n    if (!data.activeName) {\n        return;\n    }\n    if (name === \"posMax\") {\n        const item = data.items.get(data.activeName);\n        if (item) {\n            item.posMax = value[0];\n        }\n    }\n    else if (name === \"scaleMax\") {\n        const item = data.items.get(data.activeName);\n        if (item) {\n            item.scaleMax = value[0];\n        }\n    }\n    notifyclients();\n}\nfunction notifydeleted() { }\n",
                         "filename": "jit-proxy-controller.js",
                         "flags": 0,
-                        "embed": 0,
+                        "embed": 1,
                         "autowatch": 1
                     },
                     "varname": "v8_AA"
@@ -501,7 +515,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 687.0, 54.0, 54.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 464.0, 88.0, 54.0, 18.0 ],
+                    "presentation_rect": [ 424.0, 64.0, 54.0, 18.0 ],
                     "text": "RotateXYZ"
                 }
             },
@@ -518,7 +532,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 846.0, 87.0, 72.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 464.0, 152.0, 48.0, 22.0 ],
+                    "presentation_rect": [ 424.0, 128.0, 48.0, 22.0 ],
                     "varname": "rotaZ"
                 }
             },
@@ -535,7 +549,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 770.0, 87.0, 72.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 464.0, 128.0, 48.0, 22.0 ],
+                    "presentation_rect": [ 424.0, 104.0, 48.0, 22.0 ],
                     "varname": "rotaY"
                 }
             },
@@ -552,7 +566,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 687.0, 87.0, 72.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 464.0, 104.0, 48.0, 22.0 ],
+                    "presentation_rect": [ 424.0, 80.0, 48.0, 22.0 ],
                     "varname": "rotaX"
                 }
             },
@@ -569,8 +583,8 @@
             },
             {
                 "box": {
-                    "fontname": "Arial",
-                    "fontsize": 10.0,
+                    "fontface": 0,
+                    "fontsize": 14.0,
                     "id": "obj-123",
                     "maxclass": "textbutton",
                     "numinlets": 1,
@@ -579,9 +593,11 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 48.0, -320.0, 100.0, 20.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 0.0, 48.0, 136.0, 24.0 ],
+                    "presentation_rect": [ 568.0, 0.0, 40.0, 24.0 ],
+                    "style": "redness",
                     "text": "Scan",
-                    "texton": "Scan"
+                    "texton": "Scan",
+                    "usegradient": 0
                 }
             },
             {
@@ -594,7 +610,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 361.0, 87.0, 49.0, 18.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 400.0, 88.0, 49.0, 18.0 ],
+                    "presentation_rect": [ 360.0, 64.0, 49.0, 18.0 ],
                     "text": "ScaleXYZ"
                 }
             },
@@ -611,7 +627,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 577.0, 87.0, 48.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 400.0, 152.0, 56.0, 22.0 ],
+                    "presentation_rect": [ 360.0, 128.0, 56.0, 22.0 ],
                     "varname": "scaleZ"
                 }
             },
@@ -628,7 +644,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 495.0, 87.0, 48.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 400.0, 128.0, 56.0, 22.0 ],
+                    "presentation_rect": [ 360.0, 104.0, 56.0, 22.0 ],
                     "varname": "scaleY"
                 }
             },
@@ -645,7 +661,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 414.0, 87.0, 48.0, 22.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 400.0, 104.0, 56.0, 22.0 ],
+                    "presentation_rect": [ 360.0, 80.0, 56.0, 22.0 ],
                     "varname": "scaleX"
                 }
             },
@@ -656,7 +672,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ -192.0, -288.0, 93.0, 22.0 ],
+                    "patching_rect": [ -216.0, -280.0, 93.0, 22.0 ],
                     "text": "r #0-to_proxy"
                 }
             },
@@ -677,7 +693,7 @@
                     "fontname": "Arial",
                     "fontsize": 12.0,
                     "id": "obj-37",
-                    "items": [ "proxyable-layer1", ",", "proxyable-layer2", ",", "proxyable-gridshape" ],
+                    "items": "<empty>",
                     "maxclass": "chooser",
                     "numinlets": 1,
                     "numoutlets": 6,
@@ -685,7 +701,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 568.0, -336.0, 168.0, 88.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 0.0, 72.0, 136.0, 104.0 ],
+                    "presentation_rect": [ 0.0, 48.0, 136.0, 104.0 ],
                     "varname": "chooser"
                 }
             },
@@ -724,7 +740,7 @@
                     "parameter_mappable": 0,
                     "patching_rect": [ 570.0, 304.0, 16.0, 80.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 632.0, 64.0, 16.0, 112.0 ],
+                    "presentation_rect": [ 584.0, 56.0, 16.0, 96.0 ],
                     "size": 1.0,
                     "varname": "sliderAlpha"
                 }
@@ -740,14 +756,15 @@
                     "parameter_mappable": 0,
                     "patching_rect": [ 423.0, 304.0, 128.0, 80.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 520.0, 96.0, 104.0, 80.0 ],
-                    "saturation": 0.0,
+                    "presentation_rect": [ 480.0, 80.0, 104.0, 72.0 ],
+                    "saturation": 1.0,
                     "varname": "swatch"
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontname": "Ableton Sans",
+                    "fontsize": 9.5,
                     "id": "obj-14",
                     "maxclass": "textbutton",
                     "numinlets": 1,
@@ -756,9 +773,10 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 55.0, -138.0, 64.0, 24.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 328.0, 24.0, 56.0, 24.0 ],
+                    "presentation_rect": [ 296.0, 24.0, 56.0, 16.0 ],
                     "text": "Reset Pos",
-                    "texton": "Reset Pos"
+                    "texton": "Reset Pos",
+                    "usegradient": 0
                 }
             },
             {
@@ -786,15 +804,16 @@
             },
             {
                 "box": {
+                    "appearance": 1,
                     "id": "obj-13",
                     "maxclass": "live.dial",
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "float" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 814.0, 146.0, 27.0, 48.0 ],
+                    "patching_rect": [ 814.0, 146.0, 25.0, 36.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 464.0, 32.0, 48.0, 48.0 ],
+                    "presentation_rect": [ 424.0, 24.0, 40.0, 36.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_longname": "Layer[1]",
@@ -879,7 +898,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [ 55.0, -54.0, 104.0, 96.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 144.0, 24.0, 152.0, 152.0 ],
+                    "presentation_rect": [ 144.0, 24.0, 128.0, 128.0 ],
                     "style": "default",
                     "varname": "posXYSlider"
                 }
@@ -900,14 +919,14 @@
                     "bgcolor": [ 0.07119603710250286, 0.07119599716817815, 0.07119600738419576, 1.0 ],
                     "fontface": 0,
                     "fontname": "Arial",
-                    "fontsize": 12.0,
+                    "fontsize": 16.0,
                     "id": "obj-11",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ -288.0, -416.0, 210.0, 20.0 ],
+                    "patching_rect": [ -288.0, -416.0, 279.0, 24.0 ],
                     "presentation": 1,
-                    "presentation_rect": [ 0.0, 0.0, 656.0, 20.0 ],
+                    "presentation_rect": [ 0.0, 0.0, 608.0, 24.0 ],
                     "saved_attribute_attributes": {
                         "bgcolor": {
                             "expression": "themecolor.live_meter_bg"
@@ -975,7 +994,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-57", 0 ],
+                    "destination": [ "obj-42", 1 ],
                     "source": [ "obj-139", 0 ]
                 }
             },
@@ -1046,7 +1065,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-57", 0 ],
+                    "destination": [ "obj-42", 1 ],
                     "source": [ "obj-18", 0 ]
                 }
             },
@@ -1058,7 +1077,13 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-57", 0 ],
+                    "destination": [ "obj-33", 0 ],
+                    "source": [ "obj-2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-42", 1 ],
                     "source": [ "obj-21", 0 ]
                 }
             },
@@ -1109,8 +1134,14 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-57", 0 ],
+                    "destination": [ "obj-42", 1 ],
                     "source": [ "obj-32", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-42", 0 ],
+                    "source": [ "obj-34", 0 ]
                 }
             },
             {
@@ -1148,6 +1179,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-57", 0 ],
+                    "source": [ "obj-42", 1 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-50", 0 ],
                     "source": [ "obj-43", 1 ]
                 }
@@ -1160,7 +1197,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-57", 0 ],
+                    "destination": [ "obj-42", 1 ],
                     "source": [ "obj-47", 0 ]
                 }
             },
@@ -1178,7 +1215,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-57", 0 ],
+                    "destination": [ "obj-42", 1 ],
                     "source": [ "obj-50", 0 ]
                 }
             },
@@ -1244,7 +1281,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-57", 0 ],
+                    "destination": [ "obj-42", 1 ],
                     "source": [ "obj-88", 0 ]
                 }
             },
@@ -1274,7 +1311,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-57", 0 ],
+                    "destination": [ "obj-42", 1 ],
                     "source": [ "obj-95", 0 ]
                 }
             },
@@ -1313,6 +1350,22 @@
                 }
             }
         ],
+        "parameters": {
+            "obj-13": [ "Layer[1]", "Layer", 0 ],
+            "obj-17": [ "scaleMax", "Scale Max", 0 ],
+            "obj-4": [ "ScaleAll", "ScaleAll", 0 ],
+            "obj-99": [ "posMax", "Pos Max", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0,
         "bgcolor": [ 0.2243712931289883, 0.22437123370180773, 0.22437124926261326, 1.0 ],
         "saved_attribute_attributes": {
             "locked_bgcolor": {

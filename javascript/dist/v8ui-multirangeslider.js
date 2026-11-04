@@ -8,41 +8,36 @@ mgraphics.autofill = 0;
 // "collName" and "rows" are kept in this dict so they are saved with the patcher
 const dict = new Dict();
 const data = {
-    collName: jsarguments.length > 1 ? jsarguments[1] : "",
+    collName: null,
     rows: [],
 };
 let inputRef = 0;
-// triggered when the patcher is saved
-getvalueof.local = 1;
-function getvalueof() {
-    return dict;
-}
 // trigger when the patcher is loaded or pattern slot is restored
 setvalueof.local = 1;
 function setvalueof(newDict) {
     dict.clone(newDict.name);
-    data.rows = readRows();
+    const parsed = JSON.parse(dict.stringify());
+    data.rows = Array.isArray(parsed.rows) ? parsed.rows : [];
     mgraphics.redraw();
 }
-readRows.local = 1;
-function readRows() {
-    const parsed = JSON.parse(dict.stringify());
-    const saved = Array.isArray(parsed.rows) ? parsed.rows : [];
-    return saved;
+// triggered when the patcher is saved
+getvalueof.local = 1;
+function getvalueof() {
+    return dict;
 }
 saveRows.local = 1;
 function saveRows() {
     dict.set("rows", data.rows);
     notifyclients();
 }
-// Reload targets from the coll; ranges and toggles of existing labels are kept
-bang.local = 0;
-function bang() {
-    if (!data.collName)
-        return;
+loadbang.local = 0;
+function loadbang() {
+    bang();
+}
+function pullColl(name) {
     const tempDict = new Dict();
-    tempDict.pull_from_coll(data.collName);
-    data.rows = tempDict.getkeys().map((key) => {
+    tempDict.pull_from_coll(name);
+    const rows = tempDict.getkeys().map((key) => {
         const [label, min, max] = tempDict.get(key);
         return {
             label,
@@ -54,19 +49,41 @@ function bang() {
         };
     });
     tempDict.freepeer();
-    saveRows();
+    return rows;
+}
+// Reload targets from the coll; ranges and toggles of existing labels are kept
+bang.local = 0;
+function bang() {
+    if (jsarguments.length > 1) {
+        data.collName = jsarguments[1];
+    }
+    if (!data.collName) {
+        console.warn("No collName specified");
+        return;
+    }
+    const newRows = pullColl(data.collName);
+    const merged = newRows.reduce((acc, r) => {
+        const existing = data.rows.find((row) => row.label === r.label);
+        if (existing) {
+            acc.push({
+                ...r,
+                on: existing.on,
+                lo: existing.lo,
+                hi: existing.hi,
+            });
+        }
+        else {
+            acc.push(r);
+        }
+        return acc;
+    }, []);
+    data.rows = merged;
+    dict.set("rows", data.rows);
+    notifyclients();
     mgraphics.redraw();
 }
-loadbang.local = 0;
-function loadbang() {
-    data.rows = readRows();
-    if (data.rows.length === 0)
-        bang();
-    else
-        mgraphics.redraw();
-}
 const ROW_H = 24;
-const PAD = 8;
+const PAD = 4;
 const TOGGLE = 16;
 const EDGE = 8;
 let drag = null;
@@ -92,13 +109,9 @@ function paint() {
         mgraphics.stroke();
         if (r.on) {
             mgraphics.set_source_rgba(1, 0.6, 0.1, 1);
-            mgraphics.rectangle(PAD + 3, cy - TOGGLE / 2 + 3, TOGGLE - 6, TOGGLE - 6);
+            mgraphics.rectangle(PAD + 2, cy - TOGGLE / 2 + 2, TOGGLE - 4, TOGGLE - 4);
             mgraphics.fill();
         }
-        // track
-        mgraphics.set_source_rgba(0.2, 0.2, 0.2, 1);
-        mgraphics.rectangle(tx, y + 4, tw, ROW_H - 8);
-        mgraphics.fill();
         // range
         const x0 = tx + r.lo * tw;
         const x1 = tx + r.hi * tw;
@@ -108,8 +121,8 @@ function paint() {
         // incoming signal level mapped within the range
         if (r.on) {
             const mx = x0 + inputRef * (x1 - x0);
-            mgraphics.set_source_rgba(1, 1, 1, 0.8);
-            mgraphics.rectangle(mx - 1, y + 2, 2, ROW_H - 4);
+            mgraphics.set_source_rgba(1, 1, 0, 0.8);
+            mgraphics.rectangle(mx - 1, y, 2, ROW_H);
             mgraphics.fill();
         }
         // label drawn over the range
@@ -135,7 +148,7 @@ function getDragMode(x, x0, x1) {
     return x < x0 ? "lo" : "hi";
 }
 onclick.local = 0;
-function onclick(x, y) {
+function onclick(x, y, btn, mod1, shift) {
     const i = getRow(y);
     const r = data.rows[i];
     if (!r)
@@ -165,10 +178,10 @@ function onclick(x, y) {
     mgraphics.redraw();
 }
 ondrag.local = 0;
-function ondrag(x, _y, but) {
+function ondrag(x, y, btn) {
     if (!drag)
         return;
-    if (!but) {
+    if (!btn) {
         drag = null;
         saveRows();
         return;
@@ -219,7 +232,7 @@ function msg_float(val) {
     if (redrawPending)
         return;
     redrawPending = true;
-    drawTask.schedule(250);
+    drawTask.schedule(100);
 }
 function notifydeleted() {
     dict.freepeer();
